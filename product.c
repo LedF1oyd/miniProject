@@ -163,13 +163,11 @@ void findByInfo(Product*p, int index){
     printf("================================\n");
     printf("번호 원산지  품명  무게  소개  가격  배송방식\n");
     for(int i=0;i<index;i++){
-        //printf("%d번째 %s\n",i,s[i]->name);
         if(p[i].ship==-1){
             continue;   
         }
         
         if(strstr(p[i].info, inf)!=NULL){
-            //printf("%s",s[i]->name);
             found++;
             char shipment[20];
             if(p[i].ship==1){
