@@ -135,7 +135,6 @@ void findByName(Product*p, int index){
         }
         
         if(strstr(p[i].name, name)!=NULL){
-            //printf("%s",s[i]->name);
             found++;
             char shipment[20];
             if(p[i].ship==1){
