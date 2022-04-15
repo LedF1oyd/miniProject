@@ -194,7 +194,7 @@ void findByWonsanji(Product*p, int index){
     char won[60];
 
     
-    printf("검색할 상품이름은? ");
+    printf("검색할 상품의 원산지를 입력하세요:  ");
     scanf("%s", won);
     printf("\n상품정보\n");
     printf("================================\n");
