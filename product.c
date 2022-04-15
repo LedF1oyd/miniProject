@@ -242,5 +242,5 @@ void saveProduct(Product*p, int count){
         p[i].ship);
     }
     fclose(file);
-    printf("=>저장됨!\n");
+    printf("=>파일에 데이터를 저장하였습니다.!\n");
 }
