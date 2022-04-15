@@ -22,7 +22,7 @@ int loadData(Product*p){
         i++;
     }
     fclose(file);
-    printf("=> 로딩 성공!\n");
+    printf("=> 파일에서 데이터를 불러왔습니다.\n");
 
     return i-1;
 }
