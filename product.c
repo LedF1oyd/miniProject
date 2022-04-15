@@ -221,7 +221,7 @@ void findByWonsanji(Product*p, int index){
     }
     
     if(found==0){
-        printf("검색된 데이터 없음!\n");
+        printf("일치하는 원산지 정보가 없습니다.!\n");
     }
 }
 
