@@ -6,7 +6,7 @@ int loadData(Product*p){
     FILE*file=NULL;
     file=fopen("product.txt","r");
     if(file==NULL){
-        printf("=>파일 없음\n");
+        printf("=>파일에서 불러올 자료가 없습니다.\n");
         return 0;
     }
     while(!feof(file)){
