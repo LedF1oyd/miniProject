@@ -124,7 +124,7 @@ void findByName(Product*p, int index){
     char name[60];
 
     
-    printf("검색할 상품이름은? ");
+    printf("검색할 상품의 이름을 입력하세요:  ");
     scanf("%s", name);
     printf("\n상품정보\n");
     printf("================================\n");
@@ -151,7 +151,7 @@ void findByName(Product*p, int index){
     }
     
     if(found==0){
-        printf("검색된 데이터 없음!\n");
+        printf("검색된 상품이 없습니다.\n");
     }
 }
 void findByInfo(Product*p, int index){
