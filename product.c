@@ -6,7 +6,7 @@ int loadData(Product*p){
     FILE*file=NULL;
     file=fopen("product.txt","r");
     if(file==NULL){
-        printf("=>파일에서 불러올 자료가 없습니다.\n");
+        printf("=>파일 없음\n");
         return 0;
     }
     while(!feof(file)){
@@ -22,7 +22,7 @@ int loadData(Product*p){
         i++;
     }
     fclose(file);
-    printf("=> 파일에서 데이터를 불러왔습니다.\n");
+    printf("=> %d개의 데이터 로딩 성공!\n", i-1);
 
     return i-1;
 }
@@ -124,17 +124,19 @@ void findByName(Product*p, int index){
     char name[60];
 
     
-    printf("검색할 상품의 이름을 입력하세요:  ");
+    printf("검색할 상품의 이름은? ");
     scanf("%s", name);
     printf("\n상품정보\n");
     printf("================================\n");
     printf("번호 원산지  품명  무게  소개  가격  배송방식\n");
     for(int i=0;i<index;i++){
+       
         if(p[i].ship==-1){
             continue;   
         }
         
         if(strstr(p[i].name, name)!=NULL){
+            
             found++;
             char shipment[20];
             if(p[i].ship==1){
@@ -149,7 +151,7 @@ void findByName(Product*p, int index){
     }
     
     if(found==0){
-        printf("검색된 상품이 없습니다.\n");
+        printf("검색된 데이터 없음!\n");
     }
 }
 void findByInfo(Product*p, int index){
@@ -157,17 +159,19 @@ void findByInfo(Product*p, int index){
     char inf[60];
 
     
-    printf("검색할 상품에 대한 정보를 입력하세요: ");
+    printf("검색할 상품의 정보는? ");
     scanf("%s", inf);
     printf("\n상품정보\n");
     printf("================================\n");
     printf("번호 원산지  품명  무게  소개  가격  배송방식\n");
     for(int i=0;i<index;i++){
+        
         if(p[i].ship==-1){
             continue;   
         }
         
         if(strstr(p[i].info, inf)!=NULL){
+            
             found++;
             char shipment[20];
             if(p[i].ship==1){
@@ -182,7 +186,7 @@ void findByInfo(Product*p, int index){
     }
     
     if(found==0){
-        printf("일치하는 상품 정보가 없습니다.\n");
+        printf("검색된 데이터 없음!\n");
     }
 }
 void findByWonsanji(Product*p, int index){
@@ -190,19 +194,19 @@ void findByWonsanji(Product*p, int index){
     char won[60];
 
     
-    printf("검색할 상품의 원산지를 입력하세요:  ");
+    printf("검색할 상품의 원산지는? ");
     scanf("%s", won);
     printf("\n상품정보\n");
     printf("================================\n");
     printf("번호 원산지  품명  무게  소개  가격  배송방식\n");
     for(int i=0;i<index;i++){
-        //printf("%d번째 %s\n",i,s[i]->name);
+        
         if(p[i].ship==-1){
             continue;   
         }
         
         if(strstr(p[i].wonsan, won)!=NULL){
-            //printf("%s",s[i]->name);
+            
             found++;
             char shipment[20];
             if(p[i].ship==1){
@@ -217,7 +221,7 @@ void findByWonsanji(Product*p, int index){
     }
     
     if(found==0){
-        printf("일치하는 원산지 정보가 없습니다.!\n");
+        printf("검색된 데이터 없음!\n");
     }
 }
 
@@ -238,5 +242,5 @@ void saveProduct(Product*p, int count){
         p[i].ship);
     }
     fclose(file);
-    printf("=>파일에 데이터를 저장하였습니다.!\n");
+    printf("=>저장됨!\n");
 }

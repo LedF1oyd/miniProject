@@ -6,15 +6,15 @@ typedef struct{
     int price;
     int ship;
 } Product;
-int loadData(Product*p);//¿¿ ¿¿
-int addProduct(Product *p);//¿¿ ¿¿
-int selectMenu();//¿¿ ¿¿
-void readProduct(Product p);//listProduct¿¿ ¿¿ ¿¿ ¿¿
-void listProduct(Product *p, int count);//¿¿ ¿¿¿ ¿¿
-int updateProduct(Product *p);//¿¿¿ ¿¿ ¿¿
-int deleteProduct(Product *p);//¿¿ ¿¿
-int selectDataNo(Product *p, int count);//¿¿¿ ¿¿¿ ¿¿¿ ¿¿¿ ¿¿
-void findByName(Product*p, int index);//¿¿¿¿ ¿¿ ¿¿
-void findByInfo(Product*p, int index);//¿¿¿¿ ¿¿ ¿¿
-void findByWonsanji(Product*p, int index);//¿¿¿ ¿¿¿¿ ¿¿ ¿¿
-void saveProduct(Product*p, int count);//¿¿¿ ¿¿¿¿ ¿¿
+int loadData(Product*p);
+int addProduct(Product *p);
+int selectMenu();
+void readProduct(Product p);
+void listProduct(Product *p, int count);
+int updateProduct(Product *p);
+int deleteProduct(Product *p);
+int selectDataNo(Product *p, int count);
+void findByName(Product*p, int index);
+void findByInfo(Product*p, int index);
+void findByWonsanji(Product*p, int index);
+void saveProduct(Product*p, int count);

@@ -7,13 +7,13 @@ int main(void){
     Product plist[100];
     int index=0;
     int count = 0, menu;
-    index=count;
 #ifdef DEBUG
         printDebug();
         printInfo();
     #endif
 
     count=loadData(plist);
+    index=count;
     while (1){
         //printf("count=%d, index=%d\n",count, index);
         menu = selectMenu();
